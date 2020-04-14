@@ -1,0 +1,2 @@
+(this["webpackJsonphooks-lib-example"]=this["webpackJsonphooks-lib-example"]||[]).push([[0],{10:function(e,n,o){"use strict";o.r(n);var t=o(0),l=o.n(t),r=o(1),c=o.n(r);o(9);var a=()=>{var e;return e="hello world",Object(t.useEffect)((function(){console.log(e)}),[e]),l.a.createElement("h1",null,"hello world")};c.a.render(l.a.createElement(a,null),document.getElementById("root"))},2:function(e,n,o){e.exports=o(10)},9:function(e,n,o){}},[[2,1,2]]]);
+//# sourceMappingURL=main.97ab05a7.chunk.js.map
