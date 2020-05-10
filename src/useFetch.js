@@ -16,7 +16,7 @@ export const useFetch = ({ url, header, type = "json" }) => {
         setLoading(false);
       })
       .catch((error) => console.log(error));
-  }, [url, header, type]);
+  }, [url, header, type, setLoading, setResponse]);
 
   return [response, loading];
 };

@@ -14,7 +14,7 @@ export function useWindowWidth() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [setWidth]);
 
   return width;
 }

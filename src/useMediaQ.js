@@ -14,7 +14,7 @@ export const useMediaQ = (minMax, MinMaxWidth) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [setWidth]);
 
   if (minMax === "min") {
     return width > MinMaxWidth;

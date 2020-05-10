@@ -12,7 +12,7 @@ export function useHover() {
         setHover(false);
       },
     };
-  }, []);
+  }, [setHover]);
 
   return [hover, watch];
 }
