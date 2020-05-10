@@ -1,4 +1,4 @@
-function useOnClickOutside(ref, handler) {
+export function useOnClickOutside(ref, handler) {
   useEffect(() => {
     const listener = (event) => {
       if (!ref.current || ref.current.contains(event.target)) {
