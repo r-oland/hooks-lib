@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
 export const useMediaQ = (minMax, MinMaxWidth) => {
-  const [width, setWidth] = useState(window.innerWidth);
+  const innerWidth = typeof window !== "undefined" && window.innerWidth;
+  const [width, setWidth] = useState(innerWidth);
 
   useEffect(() => {
     const handleResize = () => {

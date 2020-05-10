@@ -4,6 +4,7 @@ export * from "./useIsOverFlown";
 export * from "./useLog";
 export * from "./useMeasure";
 export * from "./useMediaQ";
+export * from "./useOnClickOutside";
 export * from "./useScrollFreeze";
 export * from "./useStorage";
 export * from "./useToggle";
