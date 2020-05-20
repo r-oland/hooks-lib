@@ -14,5 +14,5 @@ export function useHover() {
     };
   }, [setHover]);
 
-  return [hover, watch];
+  return [hover, watch, setHover];
 }
