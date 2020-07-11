@@ -1,6 +1,6 @@
 {
   "name": "hooks-lib",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A strongly typed React hooks library",
   "author": "r-oland",
   "license": "MIT",
