@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-export const useIsOverflown = (ref) => {
-  const [isOverFlown, setIsOverFlown] = useState(null);
+export const useIsOverflown = (ref: any) => {
+  const [isOverFlown, setIsOverFlown] = useState(false);
 
   useEffect(() => {
     const scrollHeight = ref.current.scrollHeight;

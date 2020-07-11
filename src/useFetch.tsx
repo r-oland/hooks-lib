@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 
-export const useFetch = ({ url, header, type = "json" }) => {
+type props = {
+  url: string;
+  header: object;
+  type: string;
+};
+
+export const useFetch = ({ url, header, type = "json" }: props) => {
   const [response, setResponse] = useState(null);
   const [loading, setLoading] = useState(false);
 

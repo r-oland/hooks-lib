@@ -1,9 +1,10 @@
 // Components==============
 import { useLayoutEffect, useRef, useState } from "react";
+import ResizeObserver from "resize-observer-polyfill";
 // =========================
 
 export function useMeasure() {
-  const ref = useRef();
+  const ref = useRef(null!);
 
   const [bounds, setBounds] = useState({
     x: 0,
@@ -34,5 +35,3 @@ export function useMeasure() {
 
   return [ref, bounds];
 }
-
-//  REQUIRES POLYFILL!

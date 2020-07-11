@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useMediaQ = (minMax, MinMaxWidth) => {
+export const useMediaQ = (minMax: string, MinMaxWidth: number) => {
   const innerWidth = typeof window !== "undefined" && window.innerWidth;
   const [width, setWidth] = useState(innerWidth);
 

@@ -1,9 +1,13 @@
 import { useEffect } from "react";
 
-export function useOnClickOutside(ref, handler, condition = true) {
+export function useOnClickOutside(
+  ref: any,
+  handler: (e: any) => void,
+  condition = true
+) {
   useEffect(() => {
     if (condition) {
-      const listener = (event) => {
+      const listener = (event: MouseEvent | TouchEvent) => {
         if (!ref.current || ref.current.contains(event.target)) {
           return;
         }
@@ -19,5 +23,7 @@ export function useOnClickOutside(ref, handler, condition = true) {
         document.removeEventListener("touchstart", listener);
       };
     }
+
+    return;
   }, [ref, handler, condition]);
 }
