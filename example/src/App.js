@@ -2,9 +2,8 @@ import { useLog } from "hooks-lib";
 import React from "react";
 
 const App = () => {
-  const test = "hello world";
-  useLog(test);
-  return <h1>{test}</h1>;
-};
+  useLog("test123");
 
+  return <div>test</div>;
+};
 export default App;

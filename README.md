@@ -1,6 +1,6 @@
 # hooks-lib
 
-> My personal react hooks library
+> A strongly typed React hooks library
 
 [![NPM](https://img.shields.io/npm/v/hooks-lib.svg)](https://www.npmjs.com/package/hooks-lib) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
