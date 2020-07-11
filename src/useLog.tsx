@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const useLog = (value: any) => {
+export const useLog = (value: string) => {
   useEffect(() => {
     console.log(value);
   }, [value]);
