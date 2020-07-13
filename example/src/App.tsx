@@ -1,12 +1,12 @@
 import React from "react";
 import UseHover from "./playgrounds/UseHover";
-import UseIsOverFlown from "./playgrounds/UseIsOverFlown";
+import UseIsOverflown from "./playgrounds/UseIsOverflown";
 
 const App = () => {
   return (
     <>
       <UseHover />
-      <UseIsOverFlown />
+      <UseIsOverflown />
     </>
   );
 };

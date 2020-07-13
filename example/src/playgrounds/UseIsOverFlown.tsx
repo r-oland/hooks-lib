@@ -21,7 +21,7 @@ const Box = styled.div`
   background: green;
 `;
 
-export default function UseIsOverFlown() {
+export default function UseIsOverflown() {
   const ref = useRef(null!);
   const [x, y] = useIsOverflown(ref);
 
