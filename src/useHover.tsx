@@ -1,6 +1,13 @@
-import { useMemo, useState } from "react";
+import { SetStateAction, useMemo, useState } from "react";
 
-export function useHover() {
+export function useHover(): [
+  boolean,
+  {
+    onMouseEnter: () => void;
+    onMouseLeave: () => void;
+  },
+  React.Dispatch<SetStateAction<boolean>>
+] {
   const [hover, setHover] = useState(false);
 
   const watch = useMemo(() => {
