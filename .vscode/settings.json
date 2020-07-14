@@ -11,7 +11,7 @@
     "README.md": true,
     "rollup.config.js": true,
     ".npmignore": true,
-    "tsconfig.json": true,
+    // "tsconfig.json": true,
     "tsconfig.test.json": true
   }
 }
