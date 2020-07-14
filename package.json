@@ -17,10 +17,10 @@
     "test:watch": "react-scripts test --env=jsdom",
     "build": "rollup -c",
     "start": "rollup -c -w",
-    "example": "cd example && npm start",
+    "playground": "cd playground && npm start",
     "prepare": "npm run build",
-    "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "predeploy": "cd playground && npm install && npm run build",
+    "deploy": "gh-pages -d playground/build"
   },
   "dependencies": {
     "resize-observer-polyfill": "^1.5.1"
