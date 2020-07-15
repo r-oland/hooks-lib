@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 
-export function useToggle(initial: any) {
+export function useToggle(
+  initial: boolean
+): [boolean, () => void, React.Dispatch<SetStateAction<boolean>>] {
   const [isToggled, setIsToggled] = useState(initial);
-  const toggle = () => setIsToggled((prevState: any) => !prevState);
+  const toggle = () => setIsToggled((prevState) => !prevState);
 
-  return [isToggled, setIsToggled, toggle];
+  return [isToggled, toggle, setIsToggled];
 }
