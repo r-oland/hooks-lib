@@ -1,15 +1,30 @@
-import { useLog } from "hooks-lib";
-import React from "react";
-import "./styles.css";
+import { useMeasure } from "hooks-lib";
+import React, { useRef } from "react";
 
-const App = () => {
-  const [, setState] = React.useState(0);
+export default function App() {
+  const ref = useRef(null!);
+  const bounds = useMeasure(ref);
+  const getBoundingClientRect = (bounds: any) => {
+    const { top, right, bottom, left, width, height, x, y } = bounds;
+    return { top, right, bottom, left, width, height, x, y };
+  };
 
-  console.log("I will bloat your console on every render");
+  const arr = Object.entries(getBoundingClientRect(bounds));
 
-  useLog("I will only log when I change!", 2, true);
+  const values = arr.map((e, index: number) => {
+    return (
+      <p key={index}>
+        {e[0]}: {Math.round(e[1])}
+      </p>
+    );
+  });
 
-  return <button onClick={() => setState((prev) => prev + 1)}>Click</button>;
-};
-
-export default App;
+  return (
+    <>
+      <div ref={ref} className="outerBox">
+        <div className="innerBox" />
+      </div>
+      {values}
+    </>
+  );
+}

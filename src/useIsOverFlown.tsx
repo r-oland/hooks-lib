@@ -10,6 +10,9 @@ export const useIsOverflown = (ref: React.MutableRefObject<HTMLElement>) => {
     const scrollWidth = ref.current.scrollWidth;
     const clientWidth = ref.current.clientWidth;
 
+    // console.log(scrollHeight, clientHeight);
+    console.log(ref.current);
+
     setYIsOverFlown(scrollHeight > clientHeight);
     setXIsOverFlown(scrollWidth > clientWidth);
   }, [ref, setXIsOverFlown, setYIsOverFlown]);
