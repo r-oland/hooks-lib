@@ -4,14 +4,14 @@
     "node_modules": true,
     ".gitignore": true,
     "desktop.ini": true,
-    // "package-lock.json": true,
-    // "package.json": true,
+    "package-lock.json": true,
+    "package.json": true,
     ".editorconfig": true,
     ".travis.yml": true,
     "README.md": true,
     "rollup.config.js": true,
     ".npmignore": true,
-    // "tsconfig.json": true,
+    "tsconfig.json": true,
     "tsconfig.test.json": true
   }
 }
