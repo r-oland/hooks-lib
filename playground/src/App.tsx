@@ -1,13 +1,13 @@
-import { useWindowWidth } from "hooks-lib";
+import { useClient } from "hooks-lib";
 import React from "react";
 
 export default function App() {
-  const width = useWindowWidth();
+  const { isClient, key } = useClient();
 
   return (
     <div>
       <h2>
-        This window is <strong>{width}px </strong>wide!
+        {isClient.toString()} {key}
       </h2>
     </div>
   );

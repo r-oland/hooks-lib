@@ -1,24 +1,32 @@
 import { useEffect, useState } from "react";
+import { useClient } from "./useClient";
 
-export const useMediaQ = (minMax: "min" | "max", MinMaxWidth: number) => {
+export const useMediaQ = (
+  minMax: "min" | "max",
+  MinMaxWidth: number
+): boolean | null => {
+  const mounted = useClient();
+
   const innerWidth = typeof window !== "undefined" && window.innerWidth;
   const [width, setWidth] = useState(innerWidth);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
+    if (mounted) {
+      const handleResize = () => {
+        setWidth(window.innerWidth);
+      };
 
-    window.addEventListener("resize", handleResize);
+      window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [setWidth]);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+    return;
+  }, [setWidth, mounted]);
 
-  if (minMax === "min") {
-    return width > MinMaxWidth;
-  }
+  if (!mounted) return null;
 
-  return width < MinMaxWidth;
+  if (minMax === "min") return width > MinMaxWidth;
+  else return width < MinMaxWidth;
 };

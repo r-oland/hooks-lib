@@ -1,3 +1,4 @@
+export * from "./useClient";
 export * from "./useHover";
 export * from "./useIsOverFlown";
 export * from "./useLog";
