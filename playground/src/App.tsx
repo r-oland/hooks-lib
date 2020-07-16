@@ -7,7 +7,8 @@ export default function App() {
   return (
     <div>
       <h2>
-        {isClient.toString()} {key}
+        This is a <strong>{key}</strong> environment so isClient will return{" "}
+        <strong>{isClient.toString()}</strong>
       </h2>
     </div>
   );
