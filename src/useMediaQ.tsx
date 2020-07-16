@@ -5,13 +5,13 @@ export const useMediaQ = (
   minMax: "min" | "max",
   MinMaxWidth: number
 ): boolean | null => {
-  const mounted = useClient();
+  const { isClient } = useClient();
 
   const innerWidth = typeof window !== "undefined" && window.innerWidth;
   const [width, setWidth] = useState(innerWidth);
 
   useEffect(() => {
-    if (mounted) {
+    if (isClient) {
       const handleResize = () => {
         setWidth(window.innerWidth);
       };
@@ -23,9 +23,9 @@ export const useMediaQ = (
       };
     }
     return;
-  }, [setWidth, mounted]);
+  }, [setWidth, isClient]);
 
-  if (!mounted) return null;
+  if (!isClient) return null;
 
   if (minMax === "min") return width > MinMaxWidth;
   else return width < MinMaxWidth;
